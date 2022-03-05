@@ -9,4 +9,4 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 ADD . /usr/src/app
 #RUN ping 172.17.248.33
-RUN mvn clean test
+RUN mvn clean test -D groups=testUI
