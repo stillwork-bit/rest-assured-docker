@@ -16,7 +16,8 @@ public class DeleteRequestTest {
         int id;//---> Преобразование с int можно выполнять либо извлекать из Response значение id в виде строки
 
         id = Integer.parseInt(RestAssured.given()
-                                         .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+                                         .baseUri("https://reqres.in/")//---> Cтартовая URL
+                                         .relaxedHTTPSValidation()
                                          .body(new UserDTO("morpheus", "leader"))//---> body для запроса с методом POST
                                          .post("/api/users")//---> Endpoint для выполнения запроса GET
                                          .then()

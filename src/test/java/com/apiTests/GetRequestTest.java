@@ -41,12 +41,14 @@ public class GetRequestTest {
     @DisplayName("Тестирование запроса Get c валидацией ответа по json схеме")
     public void getRequestCheckResponseWithJsonSchema() {
         RestAssured.given()
-                   .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+                   .baseUri("https://reqres.in/")//---> Cтартовая URL
+                   .relaxedHTTPSValidation()
                    .get("/api/users/2")//---> Endpoint для выполнения запроса GET
                    .then()
                    .spec(responseSpecificationScOk())//---> Указание ResponseSpecification
                    .assertThat()
-                   .body(matchesJsonSchemaInClasspath("SchemaUsersById.json"));//---> Валидация Response json по Json Schema. Сгенерировать Json Schema можно https://www.liquid-technologies.com/online-json-to-schema-converter и далее создать файл SchemaUsersById.json в каталоге src/test/resources
+                   .body(matchesJsonSchemaInClasspath("SchemaUsersById.json"));//---> Валидация Response json по Json Schema. Сгенерировать Json Schema можно https://www.liquid-technologies.com/online-json-to-schema-converter и далее создать файл SchemaUsersById.json в каталоге src/test/resources. !!!Внимание по умолчанию вычитывается из папки resources помеченной как ресурсы тестов в проекте
+
     }
 }
 

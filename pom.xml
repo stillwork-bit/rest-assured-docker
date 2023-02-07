@@ -52,6 +52,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin.version}</version>
         <configuration>
+
           <encoding>UTF-8</encoding>
           <source>11</source>
           <target>11</target>
@@ -60,6 +61,7 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
+          <parallel>methods</parallel>
           <testFailureIgnore>true</testFailureIgnore>
           <threadCount>5</threadCount>
         </configuration>

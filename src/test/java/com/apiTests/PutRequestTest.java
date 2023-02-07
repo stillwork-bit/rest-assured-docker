@@ -17,7 +17,8 @@ public class PutRequestTest {
         String id;
 
         id = RestAssured.given()
-                        .spec(requestSpecification())//---> Указание RequestSpecification для формирования request
+                        .baseUri("https://reqres.in/")//---> Cтартовая URL
+                        .relaxedHTTPSValidation()
                         .body(new UserDTO("morpheus", "leader"))//---> body для запроса с методом POST
                         .post("/api/users")//---> Endpoint для выполнения запроса GET
                         .then()
