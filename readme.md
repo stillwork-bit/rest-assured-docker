@@ -4,4 +4,4 @@
 
 #### Текст статьи https://docs.google.com/document/d/1hiNkfoGsQicSFW9R2GE8Ldh3Br1cPSEIGBaiVuxybxk/edit?usp=sharing
 
-#### Ссылка на статью https://testit.software/blog/post/rest-assured-i-postman-dva-podhoda-k-testirovaniyu-apih
+#### Ссылка на статью https://docs.google.com/document/d/1hiNkfoGsQicSFW9R2GE8Ldh3Br1cPSEIGBaiVuxybxk/edit?usp=sharing
